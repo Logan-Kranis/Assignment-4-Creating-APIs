@@ -20,3 +20,27 @@ html {
 body {
   margin-bottom: 60px;
 }
+.highlight-button {
+    background-color: #4CAF50;
+    color: ThreeDLightShadow;
+    padding: 10px 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    table th, table td {
+        border: 2px solid #ff0000;
+        text-align: left;
+        padding: 8px;
+    }
+
+    table th {
+        background-color: ActiveBorder;
+    }
