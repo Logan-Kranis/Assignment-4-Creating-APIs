@@ -1,0 +1,74 @@
+﻿@page
+@model webpage_assigment4.Pages.dynamicModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Weather Data Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Example Weather Data Table</h2>
+<br>
+<table id="weather-table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Temperature (°F)</th>
+            <th>Humidity (%)</th>
+            <th>Wind Speed (Mph)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will be dynamically inserted here -->
+    </tbody>
+</table>
+
+<script>
+    // Sample weather data (replace this with your actual data)
+    var weatherData = [
+        { date: '2024-03-03', temperature: 15, humidity: 45, windSpeed: 6 },
+        { date: '2024-03-04', temperature: 20, humidity: 50, windSpeed: 9 },
+        { date: '2024-02-03', temperature: 25, humidity: 60, windSpeed: 10 }
+    ];
+
+    // Function to dynamically populate the table with weather data
+    function populateWeatherTable(data) {
+        var tableBody = document.getElementById('weather-table').getElementsByTagName('tbody')[0];
+        for (var i = 0; i < data.length; i++) {
+            var rowData = data[i];
+            var row = tableBody.insertRow();
+            var dateCell = row.insertCell(0);
+            var tempCell = row.insertCell(1);
+            var humidityCell = row.insertCell(2);
+            var windCell = row.insertCell(3);
+            dateCell.innerHTML = rowData.date;
+            tempCell.innerHTML = rowData.temperature;
+            humidityCell.innerHTML = rowData.humidity;
+            windCell.innerHTML = rowData.windSpeed;
+        }
+    }
+
+    // Call the function to populate the table with the sample data
+    populateWeatherTable(weatherData);
+</script>
+
+</body>
+</html>

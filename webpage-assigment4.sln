@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assigment4-api", "..\assigment4-api\assigment4-api.csproj", "{84886AE8-1BF5-4099-8FAE-40E2D83B0D20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "assigment4-api", "..\assigment4-api\assigment4-api.csproj", "{84886AE8-1BF5-4099-8FAE-40E2D83B0D20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
