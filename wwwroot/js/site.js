@@ -1,4 +1,4 @@
-﻿
+﻿//Logan Kranis
 
 async function displayfarmdetails(FARM_ID) {
     const response = await fetch('https://localhost:7081/api/Farms/${FARM_ID}')
