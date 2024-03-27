@@ -1,4 +1,11 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿
 
-// Write your JavaScript code.
+async function displayfarmdetails(FARM_ID) {
+    const response = await fetch('https://localhost:7081/api/Farms/${FARM_ID}')
+    const data = await response.json();
+    document.getElementById('farmName').innerHTML = data = [0].name;
+    document.getElementById('farmName').style.visibilty = "visible";
+
+
+
+}

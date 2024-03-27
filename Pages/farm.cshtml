@@ -1,4 +1,12 @@
 ﻿@page
 @model webpage_assigment4.Pages.farmModel
 @{
+    //var FARM_ID = HttpContent.request.Query["FARM_ID"];
 }
+<h2 id="farmName" style="visibility: hidden;"><span></span></h2>
+<div id="farmAddress" style="visibility:hidden;"></div>
+<div id="farmContact" style="visibility: hidden;"></div>
+
+<script> type="module">
+        displayfarmdetails(FARM_ID)
+</script>
