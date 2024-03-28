@@ -47,7 +47,7 @@ namespace assigment4_api.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutFarm(int id, Farm farm)
         {
-            if (id != farm.FARM_ID)
+            if (id != farm.Id)
             {
                 return BadRequest();
             }
@@ -81,7 +81,7 @@ namespace assigment4_api.Controllers
             _context.Farm.Add(farm);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetFarm", new { id = farm.FARM_ID }, farm);
+            return CreatedAtAction("GetFarm", new { id = farm.Id }, farm);
         }
 
         // DELETE: api/Farms/5
@@ -102,7 +102,7 @@ namespace assigment4_api.Controllers
 
         private bool FarmExists(int id)
         {
-            return _context.Farm.Any(e => e.FARM_ID == id);
+            return _context.Farm.Any(e => e.Id == id);
         }
     }
 }
