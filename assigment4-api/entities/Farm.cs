@@ -9,7 +9,7 @@ namespace assigment4_api.entities
             public string City { get; set; }
             public string State { get; set; }
             public string Name { get; set; }
-            public int FARM_ID { get; set; }
+            public int Id { get; set; }
             public decimal Latitude { get; set; }
             public decimal Longitude { get; set; }
         

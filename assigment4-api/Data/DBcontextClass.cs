@@ -13,8 +13,8 @@ namespace assigment4_api.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Farm>().ToTable((nameof(Farm)));
-            modelBuilder.Entity<Farm>().HasKey(x => x.FARM_ID);
-            modelBuilder.Entity<Farm>().Property(x => x.FARM_ID).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Farm>().HasKey(x => x.Id);
+            modelBuilder.Entity<Farm>().Property(x => x.Id).ValueGeneratedOnAdd();
         }
 
 
