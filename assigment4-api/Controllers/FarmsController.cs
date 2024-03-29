@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using assigment4_api.Data;
 using assigment4_api.entities;
+using assigment4_api.Repo;
 //Logan Kranis
 namespace assigment4_api.Controllers
 {
@@ -15,10 +16,12 @@ namespace assigment4_api.Controllers
     public class FarmsController : ControllerBase
     {
         private readonly DBcontextClass _context;
+        private readonly InterfaceFarmService _farmService;
 
-        public FarmsController(DBcontextClass context)
+        public FarmsController(DBcontextClass context, InterfaceFarmService farmService)
         {
             _context = context;
+            _farmService = farmService;
         }
 
         // GET: api/Farms
@@ -29,17 +32,19 @@ namespace assigment4_api.Controllers
         }
 
         // GET: api/Farms/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Farm>> GetFarm(int id)
+        [HttpGet("{city}")]
+        public async Task<ActionResult<Farm>> GetFarm(string city)
         {
-            var farm = await _context.Farm.FindAsync(id);
+            var result = await _farmService.GetFarmsbyCity(city);
 
-            if (farm == null)
+            if (result is not null)
+            {
+                return result;
+            }
+            else
             {
                 return NotFound();
             }
-
-            return farm;
         }
 
         // PUT: api/Farms/5

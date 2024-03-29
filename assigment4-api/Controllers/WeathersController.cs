@@ -42,63 +42,7 @@ namespace assigment4_api.Controllers
             return weather;
         }
 
-        // PUT: api/Weathers/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutWeather(int id, Weather weather)
-        {
-            if (id != weather.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(weather).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!WeatherExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
-        // POST: api/Weathers
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Weather>> PostWeather(Weather weather)
-        {
-            _context.Weather.Add(weather);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetWeather", new { id = weather.Id }, weather);
-        }
-
-        // DELETE: api/Weathers/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteWeather(int id)
-        {
-            var weather = await _context.Weather.FindAsync(id);
-            if (weather == null)
-            {
-                return NotFound();
-            }
-
-            _context.Weather.Remove(weather);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
+        
 
         private bool WeatherExists(int id)
         {

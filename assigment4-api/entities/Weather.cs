@@ -10,7 +10,7 @@ namespace assigment4_api.entities
         public decimal? Pressure { get; set; }
         public decimal? Humidity { get; set; }
         public decimal? Precipitation { get; set; }
-        public decimal? WindSpeed { get; set; }
+        public decimal? Wind_Speed { get; set; }
         public int Id { get; set; }
         public DateTime? Date { get; set; }
     }
