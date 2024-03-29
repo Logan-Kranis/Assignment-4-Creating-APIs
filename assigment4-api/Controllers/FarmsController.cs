@@ -24,12 +24,7 @@ namespace assigment4_api.Controllers
             _farmService = farmService;
         }
 
-        // GET: api/Farms
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Farm>>> GetFarm()
-        {
-            return await _context.Farm.ToListAsync();
-        }
+       
 
         // GET: api/Farms/5
         [HttpGet("{city}")]
@@ -78,16 +73,7 @@ namespace assigment4_api.Controllers
             return NoContent();
         }
 
-        // POST: api/Farms
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Farm>> PostFarm(Farm farm)
-        {
-            _context.Farm.Add(farm);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetFarm", new { id = farm.Id }, farm);
-        }
+        
 
         // DELETE: api/Farms/5
         [HttpDelete("{id}")]
