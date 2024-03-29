@@ -4,6 +4,6 @@ namespace assigment4_api.Repo
 {
     public interface InterfaceWeatherService
     {
-        Task<List<Weather>> GetWeatherByID(int WeatherID);
+        Task<Weather> GetWeatherByID(int WeatherID);
     }
 }

@@ -4,6 +4,6 @@ namespace assigment4_api.Repo
 {
     public interface InterfaceFarmService
     {
-        public Task<List<Farm>> GetFarmsbyCity(int cityfarm);
+        public Task<Farm> GetFarmsbyCity(string city);
     }
 }
