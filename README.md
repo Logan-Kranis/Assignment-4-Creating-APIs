@@ -1,9 +1,7 @@
 
 # Farm Management System
 
-This repository contains the code for a Farm Management System,called SmartCrop providing various functionalities to help farmers manage their farms effectively. Below is an overview of the features and user interactions within the system.
-
-## Features
+This repository contains the code for a Farm Management System, called SmartCrop providing various functionalities to help farmers manage their farms effectively. Below is an overview of the features and user interactions within the system.
 
 ### Farm Management Api
 
@@ -29,7 +27,7 @@ This repository contains the code for a Farm Management System,called SmartCrop 
    - An interactive map may accompany the information to provide visual context.
 
 
-### Farm Weather Forecast Api
+### Farm Weather Forecast API
 
 #### User Interactions:
 1. **Display Weather Forecast:**
@@ -51,32 +49,35 @@ This repository contains the code for a Farm Management System,called SmartCrop 
    - A visually appealing layout and design elements enhance user engagement and navigation.
 
 2. **Navigation Menu:**
-   - A clear and intuitive navigation menu allows users to easily access different sections of the website.
+   - A clear and intuitive navigation menu allows users to access different sections of the website easily.
    - Menu options include links to dynamic pages such as Farm Management, Nearest City, Farm Weather Forecast, Weather Dashboard, and User Profile.
    - Additionally, there may be links to About Us and Contact pages for more information and support.
 
 ### Weather Dashboard
 
-Dynamic page displaying real-time weather information using an external weather API.
+A dynamic page displaying real-time weather information using an external weather API.
 - Users can view current weather conditions, temperature, humidity, and other relevant data.
 - Interactive elements for users to search for weather information of specific locations.
 - Option to view weather forecasts for the upcoming days.
 
 ### User Profile
 
-Dynamic page displaying user-specific information and activity.
-- Users can view their submitted observations and edit/delete them if needed.
-- Profile customization options such as changing profile or updating personal information.
+A dynamic page displaying user-specific information and activity.
+- Users can view and edit/delete their submitted observations if needed.
+- Profile customization options such as changing profiles or updating personal information.
 
 ## Installation
 
 To run this Farm Management System locally, follow these steps:
 
 1. Clone this repository to your local machine. https://github.com/Logan-Kranis/Assignment-4-Creating-APIs
-2.clone this rep for mock data and my procedures https://github.com/Logan-Kranis/Mist-353-group-Project/blob/main/LoganKranisSP.sql
-
+2. clone this rep for mock data and my procedures https://github.com/Logan-Kranis/Mist-353-group-Project/blob/main/LoganKranisSP.sql
+## Resources
+1. https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.defaulthttpcontextfactory?view=aspnetcore-5.0
+2. https://stackoverflow.com/questions/1260952/how-to-execute-a-stored-procedure-within-c-sharp-program
+3. https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection
 ## Contributors
 
-- [Logan Kranis](https://github.com/Logan-Kranis/Assignment-4-Creating-APIs) - Project Lead
+- Logan Kranis
 
 
