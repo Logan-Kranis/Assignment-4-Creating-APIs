@@ -109,5 +109,18 @@ namespace assigment4_api.Controllers
         {
             return _context.Farm.Any(e => e.Id == id);
         }
+        // Post: api/Farms/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPost]
+        public async Task<ActionResult<Farm>> UpdateFarm(Farm farm)
+        {
+            var _farmservice = await FarmService.UpdateFarm(farm);
+         return UpdateFarm;
+
+        }
+
     }
 }
+    
+    
+

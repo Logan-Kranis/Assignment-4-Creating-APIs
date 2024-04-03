@@ -2,7 +2,6 @@
 using assigment4_api.entities;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using System.Data;
 //Logan Kranis
 namespace assigment4_api.Repo
 {
@@ -11,13 +10,18 @@ namespace assigment4_api.Repo
         private readonly DBcontextClass _dbcontextClass;
         private readonly IConfiguration _configuration;
 
-        public FarmService(DBcontextClass dbcontextClass, IConfiguration configuration) 
-        { 
+        public FarmService(DBcontextClass dbcontextClass, IConfiguration configuration)
+        {
             _dbcontextClass = dbcontextClass;
             _configuration = configuration;
         }
 
-        public async Task<Farm> GetFarmsbyCity(string city) 
+        public object Returnfarm { get; private set; }
+
+        
+
+        public async Task<Farm> GetFarmsbyCity(string city)
+
         {
             Farm farm = new Farm();
 
@@ -46,5 +50,26 @@ namespace assigment4_api.Repo
 
             return farm;
         }
+
+        //Ahmed Ismail
+        public async Task<Farm> UpdateFarm(Farm farm)
+
+        {
+            var farmName = new SqlParameter("@FarmName", farm.Name);
+            var farmAddress = new SqlParameter("@FarmAddress", farm.Address);
+            var farmCity = new SqlParameter("@FarmCity", farm.City);
+            var farmZipCode = new SqlParameter("@FarmZipcode",farm.ZipCode);
+            var farmState = new SqlParameter("@FarmState", farm.State);
+            var farmID = new SqlParameter("@Id", farm.Id);
+            var farmDetails = await Task.Run(() => _dbcontextClass.Database.ExecuteSqlRaw("exec UpdateFarm @FarmName,@FarmAddress,@FarmCity,@FarmZipcode,@FarmState,@Id", farmName, farmAddress, farmCity, farmZipCode, farmState, farmID));
+            return farmDetails;
+        }
+        public async Task<Farm> DeleteFarms(Farm farm)
+        {
+            var FarmID = new SqlParameter("@Id",farm.Id);
+            var farmDetails = await Task.Run(() => _dbcontextClass.Database.ExecuteSqlRaw("exec DeleteFarm @Id", FarmID));
+            return farmDetails;
+         }
+
+        }
     }
-}

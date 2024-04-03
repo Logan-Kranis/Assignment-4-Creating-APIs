@@ -1,8 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 //Logan Kranis
 namespace assigment4_api.entities
 {
-    public class Farm
+    public class Farm 
     {
             public string Address { get; set; }
             public string ZipCode { get; set; }
