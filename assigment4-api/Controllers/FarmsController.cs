@@ -32,7 +32,7 @@ namespace assigment4_api.Controllers
         }
 
         // GET: api/Farms/5
-        [HttpGet("{city}")]
+        [HttpGet("hidojfjf/{city}")]
         public async Task<ActionResult<Farm>> GetFarm(string city)
         {
             var result = await _farmService.GetFarmsbyCity(city);
@@ -49,38 +49,38 @@ namespace assigment4_api.Controllers
 
         // PUT: api/Farms/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutFarm(int id, Farm farm)
-        {
-            if (id != farm.Id)
-            {
-                return BadRequest();
-            }
+        //[HttpPost("jfsnksnf/{id}")]
+        //public async Task<IActionResult> PutFarm(int id, Farm farm)
+        //{
+        //    if (id != farm.Id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(farm).State = EntityState.Modified;
+        //    _context.Entry(farm).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!FarmExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!FarmExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         // POST: api/Farms
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
+        [HttpPost("hdjfiksf")]
         public async Task<ActionResult<Farm>> PostFarm(Farm farm)
         {
             _context.Farm.Add(farm);
@@ -90,7 +90,7 @@ namespace assigment4_api.Controllers
         }
 
         // DELETE: api/Farms/5
-        [HttpDelete("{id}")]
+        [HttpDelete("sjdnfjd/{id}")]
         public async Task<IActionResult> DeleteFarm(int id)
         {
             var farm = await _context.Farm.FindAsync(id);
@@ -104,18 +104,19 @@ namespace assigment4_api.Controllers
 
             return NoContent();
         }
-
-        private bool FarmExists(int id)
-        {
-            return _context.Farm.Any(e => e.Id == id);
-        }
+        
+        ////private bool FarmExists(int id)
+        //{
+        //   return _context.Farm.Any(e => e.Id == id);
+        ////}
+        //Ahmed Ismail 
         // Post: api/Farms/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Farm>> UpdateFarm(Farm farm)
+        public async Task<ActionResult<int>> UpdateFarm(Farm farm)
         {
-            var _farmservice = await FarmService.UpdateFarm(farm);
-         return UpdateFarm;
+            var _farmservice = await _farmService.UpdateFarm(farm);
+         return _farmservice;
 
         }
 

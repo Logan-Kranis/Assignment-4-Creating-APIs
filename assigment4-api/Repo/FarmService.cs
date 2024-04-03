@@ -2,6 +2,7 @@
 using assigment4_api.entities;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 //Logan Kranis
 namespace assigment4_api.Repo
 {
@@ -52,7 +53,7 @@ namespace assigment4_api.Repo
         }
 
         //Ahmed Ismail
-        public async Task<Farm> UpdateFarm(Farm farm)
+        public async Task<int> UpdateFarm(Farm farm)
 
         {
             var farmName = new SqlParameter("@FarmName", farm.Name);
@@ -64,7 +65,7 @@ namespace assigment4_api.Repo
             var farmDetails = await Task.Run(() => _dbcontextClass.Database.ExecuteSqlRaw("exec UpdateFarm @FarmName,@FarmAddress,@FarmCity,@FarmZipcode,@FarmState,@Id", farmName, farmAddress, farmCity, farmZipCode, farmState, farmID));
             return farmDetails;
         }
-        public async Task<Farm> DeleteFarms(Farm farm)
+        public async Task<int> DeleteFarms(Farm farm)
         {
             var FarmID = new SqlParameter("@Id",farm.Id);
             var farmDetails = await Task.Run(() => _dbcontextClass.Database.ExecuteSqlRaw("exec DeleteFarm @Id", FarmID));
