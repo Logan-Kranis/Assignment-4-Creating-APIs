@@ -76,6 +76,7 @@ To run this Farm Management System locally, follow these steps:
 1. https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.defaulthttpcontextfactory?view=aspnetcore-5.0
 2. https://stackoverflow.com/questions/1260952/how-to-execute-a-stored-procedure-within-c-sharp-program
 3. https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection
+4. ChatGTP The prompt 'make mock data for my tables'
 ## Contributors
 
 - Logan Kranis
