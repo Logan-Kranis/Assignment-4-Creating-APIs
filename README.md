@@ -66,7 +66,7 @@ A dynamic page displaying user-specific information and activity.
 - Users can view and edit/delete their submitted observations if needed.
 - Profile customization options such as changing profiles or updating personal information.
 
-##Two Branches 
+## Two Branches 
 There are two branches there is the main branch and two different branches Logan's branch and Ahmed's branch. 
 
 ## Installation
