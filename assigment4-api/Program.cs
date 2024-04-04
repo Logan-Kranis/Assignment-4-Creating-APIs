@@ -5,6 +5,7 @@ using assigment4_api.Repo;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<IWeatherService, WeatherService>();
 builder.Services.AddScoped<InterfaceFarmService, FarmService>();
 builder.Services.AddDbContext<DBcontextClass>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
