@@ -72,6 +72,7 @@ To run this Farm Management System locally, follow these steps:
 
 1. Clone this repository to your local machine. https://github.com/Logan-Kranis/Assignment-4-Creating-APIs
 2. clone this rep for mock data and my procedures https://github.com/Logan-Kranis/Mist-353-group-Project/blob/main/LoganKranisSP.sql
+3. 
 ## Resources
 1. https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.defaulthttpcontextfactory?view=aspnetcore-5.0
 2. https://stackoverflow.com/questions/1260952/how-to-execute-a-stored-procedure-within-c-sharp-program
@@ -80,5 +81,5 @@ To run this Farm Management System locally, follow these steps:
 ## Contributors
 
 - Logan Kranis
-
+- Ahmed Ismail
 
