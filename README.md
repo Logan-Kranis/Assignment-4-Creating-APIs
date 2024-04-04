@@ -66,13 +66,15 @@ A dynamic page displaying user-specific information and activity.
 - Users can view and edit/delete their submitted observations if needed.
 - Profile customization options such as changing profiles or updating personal information.
 
+##Two Branches 
+There are two branches there is the main branch and two different branches Logan's branch and Ahmed's branch. 
+
 ## Installation
 
 To run this Farm Management System locally, follow these steps:
 
 1. Clone this repository to your local machine. https://github.com/Logan-Kranis/Assignment-4-Creating-APIs
 2. clone this rep for mock data and my procedures https://github.com/Logan-Kranis/Mist-353-group-Project/blob/main/LoganKranisSP.sql
-3. 
 ## Resources
 1. https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.defaulthttpcontextfactory?view=aspnetcore-5.0
 2. https://stackoverflow.com/questions/1260952/how-to-execute-a-stored-procedure-within-c-sharp-program
