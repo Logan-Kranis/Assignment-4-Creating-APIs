@@ -32,7 +32,7 @@ namespace assigment4_api.Controllers
         }
 
         // GET: api/Farms/5
-        [HttpGet("hidojfjf/{city}")]
+        [HttpGet("GetFarm/{city}")]
         public async Task<ActionResult<Farm>> GetFarm(string city)
         {
             var result = await _farmService.GetFarmsbyCity(city);
@@ -49,7 +49,7 @@ namespace assigment4_api.Controllers
 
         // PUT: api/Farms/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        //[HttpPost("jfsnksnf/{id}")]
+        //[HttpPost("Put Farm/{id}")]
         //public async Task<IActionResult> PutFarm(int id, Farm farm)
         //{
         //    if (id != farm.Id)
@@ -80,7 +80,7 @@ namespace assigment4_api.Controllers
 
         // POST: api/Farms
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost("hdjfiksf")]
+        [HttpPost("PostFarm")]
         public async Task<ActionResult<Farm>> PostFarm(Farm farm)
         {
             _context.Farm.Add(farm);
@@ -90,7 +90,7 @@ namespace assigment4_api.Controllers
         }
 
         // DELETE: api/Farms/5
-        [HttpDelete("sjdnfjd/{id}")]
+        [HttpDelete("DeleteFarm/{id}")]
         public async Task<IActionResult> DeleteFarm(int id)
         {
             var farm = await _context.Farm.FindAsync(id);
@@ -105,10 +105,10 @@ namespace assigment4_api.Controllers
             return NoContent();
         }
         
-        ////private bool FarmExists(int id)
-        //{
-        //   return _context.Farm.Any(e => e.Id == id);
-        ////}
+        private bool FarmExists(int id)
+        {
+           return _context.Farm.Any(e => e.Id == id);
+        }
         //Ahmed Ismail 
         // Post: api/Farms/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
