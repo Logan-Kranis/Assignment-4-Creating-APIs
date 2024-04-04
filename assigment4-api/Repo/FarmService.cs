@@ -3,22 +3,25 @@ using assigment4_api.entities;
 using assigment4_api.Repo;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 //Logan Kranis
 namespace assigment4_api.Repo
 {
     public class FarmService : InterfaceFarmService
     {
         private readonly DBcontextClass _dbcontextClass;
+        private readonly IConfiguration _configuration;
 
-        public FarmService(DBcontextClass dbcontextClass)
-        {
+        public FarmService(DBcontextClass dbcontextClass, IConfiguration configuration) 
+        { 
             _dbcontextClass = dbcontextClass;
+            _configuration = configuration;
         }
 
-        public async Task<List<Farm>> GetFarmsbyCity(int cityfarm)
-        {
-            var param = new SqlParameter("@city", cityfarm);
-            var cityfdetails = await Task.Run(() => _dbcontextClass.Farm.FromSqlRaw("exec SelectFarmsByCity @city", param).ToListAsync());
+        public async Task<List<Farm>> GetFarmsbyCity(int cityfarm ) 
+        { 
+            var param = new SqlParameter("@city", cityfarm );
+            var cityfdetails = await Task.Run(() => _dbcontextClass.Farm.FromSqlRaw("exec SelectFarmsByCity @city",param).ToListAsync());
             return cityfdetails;
         }
         //Ahmed Ismail
