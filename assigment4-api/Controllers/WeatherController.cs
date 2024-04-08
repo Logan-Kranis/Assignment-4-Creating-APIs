@@ -12,11 +12,11 @@ namespace assigment4_api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class WeathersController : ControllerBase
+    public class WeatherController : ControllerBase
     {
         private readonly DBcontextClass _context;
 
-        public WeathersController(DBcontextClass context)
+        public WeatherController(DBcontextClass context)
         {
             _context = context;
         }
