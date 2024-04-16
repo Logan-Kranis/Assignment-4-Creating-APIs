@@ -57,13 +57,13 @@ document.getElementById('searchForm').addEventListener('submit', async function 
             L.marker([data.latitude, data.longitude]).addTo(map)
                 .bindPopup(data.name)
                 .openPopup();
-        } else {
-            alert('Farm details not found for the entered city.');
-        }
-    } catch (error) {
-        console.error('Error fetching farm details:', error);
-        // Handle error
-    }
+    //    } else {
+    //        alert('Farm details not found for the entered city.');
+    //    }
+    //} catch (error) {
+    //    console.error('Error fetching farm details:', error);
+    //    // Handle error
+    //}
 });
 
 
