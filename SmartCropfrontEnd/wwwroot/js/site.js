@@ -18,7 +18,7 @@
 //}
 
 
-
+// Added the base map layer from Leaflet and js
 document.getElementById('searchForm').addEventListener('submit', async function (event) {
     event.preventDefault();
 
@@ -48,22 +48,22 @@ document.getElementById('searchForm').addEventListener('submit', async function 
            
             const map = L.map('map').setView([data.latitude, data.longitude], 13);
 
-            // Add the base map layer from Leaflet
+            
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
 
-            // Add a marker for the farm's location
+            
             L.marker([data.latitude, data.longitude]).addTo(map)
                 .bindPopup(data.name)
                 .openPopup();
-    //    } else {
-    //        alert('Farm details not found for the entered city.');
-    //    }
-    //} catch (error) {
-    //    console.error('Error fetching farm details:', error);
-    //    // Handle error
-    //}
+        } else {
+            alert('Farm details not found for the entered city.');
+        }
+    } catch (error) {
+       console.error('Error fetching farm details:', error);
+        
+    }
 });
 
 

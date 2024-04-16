@@ -91,7 +91,7 @@ To run this Farm Management System locally, follow these steps:
 3. https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection
 4. ChatGTP The prompt 'make mock data for my tables'
 5. For the map and js for the map https://leafletjs.com/
-6.
+6. map from https://www.openstreetmap.org/copyright
 ## Contributors
 
 - Logan Kranis
