@@ -13,7 +13,7 @@ BEGIN
         [city] = @city,
         [state] = @state,
         [name] = @name
-    WHERE [FARM_ID] = @FARM_ID;
+    WHERE [Id] = @FARM_ID;
 END;
 GO
 
@@ -22,6 +22,6 @@ CREATE or ALTER PROCEDURE [dbo].[DeleteFarm]
 AS
 BEGIN
     DELETE FROM [dbo].[farm]
-    WHERE [FARM_ID] = @FARM_ID;
+    WHERE [Id] = @FARM_ID;
 END;
 GO
