@@ -1,0 +1,16 @@
+﻿@page
+@model SmartCrop.Pages.UpdateFarmModel
+
+<form method="post">
+    <input type="hidden" asp-for="Farm.Id" />
+    <div>
+        <label asp-for="Farm.Name">Name:</label>
+        <input asp-for="Farm.Name" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Farm.Address">Address:</label>
+        <input asp-for="Farm.Address" class="form-control" />
+    </div>
+    <!-- Add more fields as necessary -->
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
