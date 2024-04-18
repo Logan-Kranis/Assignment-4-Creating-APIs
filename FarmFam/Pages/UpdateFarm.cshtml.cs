@@ -22,7 +22,7 @@ namespace SmartCrop.Pages
         public async Task<IActionResult> OnGetAsync(int id)
         {
             var request = new HttpRequestMessage(HttpMethod.Get,
-                $"https://localhost:5078/api/Farms/{id}"); // Use your actual API URL
+                $"http://localhost:5078/api/Farms/GetFarm/{id}"); // Use your actual API URL
             var client = _clientFactory.CreateClient();
 
             var response = await client.SendAsync(request);
@@ -45,7 +45,7 @@ namespace SmartCrop.Pages
 
             var client = _clientFactory.CreateClient();
             var farmJson = JsonConvert.SerializeObject(Farm);
-            var response = await client.PutAsync($"http://localhost:5078/api/Farms/{Farm.Id}", new StringContent(farmJson, System.Text.Encoding.UTF8, "application/json"));
+            var response = await client.PostAsync($"http://localhost:5078/api/Farms", new StringContent(farmJson, System.Text.Encoding.UTF8, "application/json"));
 
             if (response.IsSuccessStatusCode)
             {
