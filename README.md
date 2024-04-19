@@ -77,13 +77,6 @@ A step-by-step guide was provided for building a functional website with ASP.NET
 - Defining the service layer.
 - Configuring the Razor Page and Page Model for API interaction.
 
-### Markdown Formatting for README Files
-
-An explanation on how to correctly format Markdown content for a README file was given. This included demonstrating the structuring of features, installation steps, resources, and contributor acknowledgments for a project repository.
-
----
-
-*Note: For specific implementation details, code snippets, and further instructions, refer to the actual project documentation and source code.*
 
 ## Contributors
 
