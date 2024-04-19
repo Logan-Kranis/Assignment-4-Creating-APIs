@@ -75,10 +75,10 @@ There are two branches there is the main branch and two different branches Logan
 
 ## Installation
 
-To run this Farm Management System locally, follow these steps:
+To run this Farm Management System locally, follow these steps: use logan's branch
 
 1. Clone this repository to your local machine. https://github.com/Logan-Kranis/Assignment-4-Creating-APIs
-2. Clone this rep for mock data and my procedures https://github.com/Logan-Kranis/Mist-353-group-Project/blob/main/LoganKranisSP.sql
+2. For mock data and my procedures there is folder called SQL
 3. RUN DatabaseCreation.sql
 4. RUN Farmseeddata.sql
 5. RUN Farmseeddata.sql
@@ -89,7 +89,7 @@ To run this Farm Management System locally, follow these steps:
 1. https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.defaulthttpcontextfactory?view=aspnetcore-5.0
 2. https://stackoverflow.com/questions/1260952/how-to-execute-a-stored-procedure-within-c-sharp-program
 3. https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection
-4. ChatGTP The prompt 'make mock data for my tables'
+4. ChatGTP The prompt 'make mock data for my tables' as weell as debugging
 5. For the map and js for the map https://leafletjs.com/
 6. map from https://www.openstreetmap.org/copyright
 ## Contributors

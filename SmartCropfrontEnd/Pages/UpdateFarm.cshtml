@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Farm Information</title>
     <style>
-        /* Add your CSS styles here */
+        
     </style>
 </head>
 
@@ -14,7 +14,7 @@
     <label for="select-farm">Select Farm:</label>
     <br>
     <select id="select-farm" onchange="updateFarmInfo(this.value)">
-        <!-- Options will be populated dynamically -->
+        <
     </select>
     <br>
     <br>
@@ -41,7 +41,7 @@
     <div id="response-message"></div>
 
     <script>
-        // Populate dropdown with farm options
+        
         async function populateFarmsDropdown() {
             try {
                 const response = await fetch('/api/Farms');
@@ -50,12 +50,12 @@
                 const selectFarm = document.getElementById('select-farm');
                 farms.forEach(farm => {
                     const option = document.createElement('option');
-                    option.value = farm.id; // Assuming farm objects have an 'id' property
-                    option.text = farm.name; // Assuming farm objects have a 'name' property
+                    option.value = farm.id; 
+                    option.text = farm.name; 
                     selectFarm.appendChild(option);
                 });
 
-                // Update farm info when page loads
+                
                 updateFarmInfo(selectFarm.value);
             } catch (error) {
                 console.error('Error fetching farms:', error);
@@ -63,13 +63,13 @@
             }
         }
 
-        // Update farm information based on selected farm
+       
         async function updateFarmInfo(farmId) {
             try {
                 const response = await fetch(`/api/Farms/${farmId}`);
                 const farmData = await response.json();
 
-                // Update form fields with farm data
+                
                 document.getElementById('name').value = farmData.name;
                 document.getElementById('address').value = farmData.address;
                 document.getElementById('city').value = farmData.city;
@@ -78,14 +78,14 @@
                 document.getElementById('latitude').value = farmData.latitude;
                 document.getElementById('longitude').value = farmData.longitude;
 
-                document.getElementById('response-message').textContent = ''; // Clear any previous messages
+                document.getElementById('response-message').textContent = ''; 
             } catch (error) {
                 console.error('Error fetching farm data:', error);
                 document.getElementById('response-message').textContent = 'Error fetching farm data. Please try again.';
             }
         }
 
-        // Handle form submission
+        
         document.getElementById('edit-farm-form').addEventListener('submit', async function (event) {
             event.preventDefault();
 

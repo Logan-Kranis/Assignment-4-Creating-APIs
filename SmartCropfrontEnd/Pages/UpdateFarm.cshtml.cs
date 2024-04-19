@@ -17,16 +17,16 @@ namespace SmartCropfrontEnd.Pages
 
         public void OnGet()
         {
-            // This method handles GET requests to this page
+            
         }
 
         public async Task<IActionResult> OnPostAsync(int farmId, string address, string zipcode, string city, string state, string name)
         {
-            // Call the method to update the farm
+            
             await UpdateFarmAsync(farmId, address, zipcode, city, state, name);
 
-            // Redirect to another page or return a response
-            return RedirectToPage("/Index"); // Redirect to the index page after updating
+            
+            return RedirectToPage("/Index"); 
         }
 
         private async Task UpdateFarmAsync(int farmId, string address, string zipcode, string city, string state, string name)
@@ -47,9 +47,9 @@ namespace SmartCropfrontEnd.Pages
 
         internal async Task UpdateFarm(int farmId, string address, string zipcode, string city, string state, string name)
         {
-            // Implement your farm update logic here
-            // You can use _configuration to access app settings if needed
-            // For now, let's just throw a NotImplementedException
+            
+            
+            
             throw new NotImplementedException();
         }
     }
