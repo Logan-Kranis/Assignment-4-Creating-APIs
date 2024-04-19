@@ -1,0 +1,37 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Net.Http;
+using System.Threading.Tasks;
+
+namespace SmartCrop.Pages
+{
+    public class DeleteFarmModel : PageModel
+    {
+        private readonly IHttpClientFactory _clientFactory;
+
+        public DeleteFarmModel(IHttpClientFactory clientFactory)
+        {
+            _clientFactory = clientFactory;
+        }
+
+        public async Task<IActionResult>
+    OnGetAsync(int id)
+    {
+    var client = _clientFactory.CreateClient();
+    var response = await client.DeleteAsync($"http://localhost:5078/api/Farms/DeleteFarm/{id}");
+
+    if (response.IsSuccessStatusCode)
+    {
+    // Optionally, add a success message to TempData to display on the redirected page
+    TempData["SuccessMessage"] = "Farm successfully deleted.";
+    return RedirectToPage("./Index"); // Redirect to the Index page or a confirmation page
+    }
+    else
+    {
+    
+    ModelState.AddModelError(string.Empty, "Your Farm Has Been Deleted.");
+    return Page();
+    }
+    }
+    }
+    }
