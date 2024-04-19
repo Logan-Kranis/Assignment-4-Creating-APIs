@@ -96,3 +96,7 @@ To run this Farm Management System locally, follow these steps: use logan's bran
 
 - Logan Kranis
 - Ahmed Ismail
+
+
+## Pages assigment5
+Logan Kranis made the Weather,Home,Privacy, and Farm pages.
