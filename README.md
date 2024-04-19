@@ -32,5 +32,16 @@ To run the SmartCrop Farm Management System locally, follow these steps:
    ```bash
    git clone https://github.com/Logan-Kranis/Assignment-4-Creating-APIs
 2. git clone https://github.com/Logan-Kranis/Mist-353-group-Project/blob/main/LoganKranisSP.sql
-3. git clone https://github.com/Logan-Kranis/Mist-353-group-Project/blob/main/AhmedIsmailSP.sql
-4. 
+3. git clone https://github.com/Logan-Kranis/Assignment-4-Creating-APIs.git
+
+
+## Resources
+
+- **HttpContextFactory and its usage:** [Microsoft Docs](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.defaulthttpcontextfactory?view=aspnetcore-5.0)
+- **Executing stored procedures in C#:** [StackOverflow](https://stackoverflow.com/questions/1260952/how-to-execute-a-stored-procedure-within-c-sharp-program)
+- **Dependency injection in .NET:** [Microsoft Docs](https://learn.microsoft.com/en
+
+## Contributors
+
+- Logan Kranis
+- Ahmed Ismail
